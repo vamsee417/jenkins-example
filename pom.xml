@@ -27,18 +27,19 @@
                 <artifactId>maven-surefire-plugin</artifactId>
 	  </plugin>
               
-                <dependencies>
+               
+        </plugins>
+    </build>
+
+ 
+	 <dependencies>
                     <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider</artifactId>
                         <version>1.0.0-M3</version>
                     </dependency>
-                </dependencies>
+                
            
-        </plugins>
-    </build>
-
-    <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -52,7 +53,4 @@
         </dependency>
 
     </dependencies>
-
-   
-
 </project>
