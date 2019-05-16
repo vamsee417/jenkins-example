@@ -6,7 +6,7 @@
 
     <groupId>com.techprimers.testing</groupId>
     <artifactId>jenkins-example</artifactId>
-    <version>vamsi 1.0-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
 
 
     <properties>
@@ -18,28 +18,24 @@
 
     <build>
         <plugins>
-           
-        
-
-     <plugin> <artifactId>maven-compiler-plugin</artifactId>
-	 </plugin>
-      <plugin>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+            <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-	  </plugin>
-              
-               
-        </plugins>
-    </build>
-
- 
-	 <dependencies>
+                <version>2.19</version>
+                <dependencies>
                     <dependency>
                         <groupId>org.junit.platform</groupId>
                         <artifactId>junit-platform-surefire-provider</artifactId>
                         <version>1.0.0-M3</version>
                     </dependency>
-                
-           
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
@@ -53,4 +49,19 @@
         </dependency>
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>myMavenRepo.read</id>
+            <url>https://mymavenrepo.com/repo/FN8PIshHk5uALNhkXbhs/</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>myMavenRepo.write</id>
+            <url>https://mymavenrepo.com/repo/9Q8JoRpymi4UGK8HzbVq/</url>
+        </repository>
+    </distributionManagement>
+
 </project>
