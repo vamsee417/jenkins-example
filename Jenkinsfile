@@ -28,5 +28,23 @@ pipeline {
                 }
             }
         }
-    }
+		        
+stage('Docker build') {
+     steps {
+      
+          sh 'docker build -t javadock'
+		  
+     }
 }
+        stage('Deploy') {
+     steps {
+ 
+          sh 'docker run -v /var/run/docker.sock:/var/run/docker.sock -d --rm -p 8765:8054 --name javadock'
+		  
+     }
+}
+	
+    }
+	
+}
+ 
