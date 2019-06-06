@@ -32,7 +32,7 @@ pipeline {
 stage('Docker build') {
      steps {
       
-          sh 'docker build -t javadock'
+          sh 'docker build -t javadock .'
 		  
      }
 }
