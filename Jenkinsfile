@@ -52,5 +52,5 @@ stage('Docker build') {
     }
 	
 }
-}
+
  
